@@ -1,0 +1,58 @@
+#Function that guess the age and returns it
+def guess_age(a, b, c):
+    age = (a * 70 + b * 21 + c * 15) % 105
+    
+    return age
+    
+#Function that counts up to the selected number
+def count_num(a):
+    for i in range(a + 1):
+        print(i, "!")
+    print("Completed, have a nice day!")
+        
+
+ans_list = ["To repeat a statement multiple times.", "To decompose a program into several small subroutines.", 
+"To determine the execution time of a program.", "To interrupt the execution of a program."]
+
+#Introduction and asking for name
+print("Suuuup! My name is Robottingham.")
+print("I was created in 2022.")
+print("Please, remind me your name.")
+
+your_name = input()
+
+#Guessing the persons age
+print("What a great name you have " , your_name,"! ", sep="")
+print("Let me guess your age")
+print("Enter remainders of dividing your age by 3, 5 and 7")
+r_1 = int(input())
+r_2 = int(input())
+r_3 = int(input())
+your_age = guess_age(r_1, r_2, r_3)
+
+print("Your age is ", your_age,"; that's a good time to start programming!", sep = "")
+
+#Counting up to the selected number
+print("Now I will prove to you that I can count to any number you want.")
+
+num = int(input())
+
+count_num(num)
+
+#Selecting the correct answer
+print("Let's test your programming knowledge.")
+print("Why do we use methods?")
+print("1. ", ans_list[0])
+print("2. ", ans_list[1])
+print("3. ", ans_list[2])
+print("4. ", ans_list[3])
+
+while True:
+    result = int(input())
+    
+    if result == 2:
+        print("Congratulations, have a nice day!")
+        break
+    else:
+        print("Please, try again")
+        
